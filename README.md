@@ -40,12 +40,13 @@ Windows target with realistic CMS (Umbraco) and RDP misconfigurations – common
 
 **Tools Selection**
 
-| Tool | Purpose |
-|------|---------|
-| Nmap | Port scanning + service detection |
-| Nikto | Web vulnerability scanning |
-| Curl | HTTP request inspection |
-| View Page Source | HTML comment/flag discovery |
-| xfreerdp3 | CLI RDP client |
-| Remmina | GUI RDP client |
+### Tools Used & Justification
+
+| Phase | Tool | Justification |
+|-------|------|----------------|
+| **Reconnaissance** | Nmap | Initial port scan to identify attack surface |
+| **Web Enumeration** | Nikto, Curl, Browser | Automated + manual web inspection to uncover `/robots.txt` and hidden credentials |
+| **Flag Discovery** | View Page Source (Ctrl+U) | Found flags directly in HTML comments during manual review |
+| **Exploitation** | xfreerdp3, Remmina | RDP clients used to connect to Windows target after credential discovery (`sg:UmbracoIsTheBest!`) |
+
 

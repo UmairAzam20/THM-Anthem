@@ -89,5 +89,26 @@ Flag found in source: `THM{...}`
 
 Author email pattern: JD@anthem.com (from "We Are Hiring" post)
 
-![Nmap Scan Results](screenshots/robots.txt1.png)
+* Email Pattern
+  
+![Nmap Scan Results](screenshots/wethought.png)
 
+* Flag in View Page Source
+  
+  *Flag 1*
+  
+![Nmap Scan Results](screenshots/anotherone.png)
+
+  *Flag 2*
+  
+![Nmap Scan Results](screenshots/ANOTHERFLAG.png)
+
+  *Flag 4*
+  
+![Nmap Scan Results](screenshots/MOREFLAG.png)
+
+For Flag 3 we found it in the web page displaying in pages Authors/Jane Doe
+
+  *Flag 3*
+  
+![Nmap Scan Results](screenshots/flagnumberdonow.png)

@@ -116,7 +116,7 @@ For Flag 3 we found it in the web page displaying in pages Authors/Jane Doe
 
 **Post 1 – "We Are Hiring":**
 
-* Email found: JD@anthem.com
+* Email found: `JD@anthem.com`
 
 * Flag 1 & 2 found in source code
 
@@ -154,7 +154,7 @@ For Flag 3 we found it in the web page displaying in pages Authors/Jane Doe
 | Username / Email              | Password Found        | Working? |
 |------------------------------|----------------------|----------|
 | JD@anthem.com                | (none yet)           | ❌ No     |
-| sg@anthem.com (Solomon Grundy) | UmbracoIsTheBest!   | ✅ Yes    |
+| SG@anthem.com (Solomon Grundy) | UmbracoIsTheBest!   | ✅ Yes    |
 
 **Command to test web login:**
 
@@ -221,11 +221,61 @@ Or Using remmina
 
 *Step 2*
 
-![Nmap Scan Results](screenshots/rdprestore.txt.png)
+![Nmap Scan Results](screenshots/rdpbackupfiles.png)
 
 
 *Step 3*
 
-![Nmap Scan Results](screenshots/rdpbackupfiles.png)
+![Nmap Scan Results](screenshots/rdprestore.txt.png)
+
+*Step 4* - Can't Open
+
+![Nmap Scan Results](screenshots/rdprestore.txtcdannotopen.png)
 
 
+**Step 4 – Read restore.txt (Permission Fix):**
+
+Right-click `restore.txt` → Properties → Security
+
+Add `sg` user with read permission
+
+* Add user
+  
+![Nmap Scan Results](screenshots/editaccessfilerdp.png)
+
+* Give permission
+  
+![Nmap Scan Results](screenshots/rdpaccssfullpermission.png)
+
+
+* Open File Again and Successfull
+  
+![Nmap Scan Results](screenshots/rdpaccssfullpermission.png)
+
+Password found: `ChangeMeBaby1MoreTime`
+
+**Step 5 – Admin RDP Login:**
+
+```bash
+# Go to This Pc Navigate to C:\Users\Administrator
+# Fill in the Credentials 
+# Go to Desktop File: root.txt
+```
+
+* Go to This Pc Navigate to C:\Users\Administrator
+
+![Nmap Scan Results](screenshots/logintoadministrtor.png)
+
+* Fill in the Credentials 
+
+![Nmap Scan Results](screenshots/logintoadministrtorstep2.png)
+
+* Go to Desktop File: root.txt 
+
+![Nmap Scan Results](screenshots/logintoadministrtorsteplast.png)
+
+Capture Admin Flag:
+
+Location: Administrator desktop
+
+File: `root.txt` 

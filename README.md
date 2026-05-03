@@ -112,3 +112,30 @@ For Flag 3 we found it in the web page displaying in pages Authors/Jane Doe
   *Flag 3*
   
 ![Nmap Scan Results](screenshots/flagnumberdonow.png)
+
+
+**Post 1 – "We Are Hiring":**
+
+* Email found: JD@anthem.com
+
+* Flag 1 & 2 found in source code
+
+* Link to author revealed Flag 3
+
+
+**Post 2 – "Cheers to Our IT Department":**
+
+
+* Author name: James Orchard Halliwell
+
+* Poem mentions "Solomon Grundy"
+
+* Flag 4 found in source code
+
+*Poem*
+
+![Nmap Scan Results](screenshots/solomon.png)
+
+*Searching from Google About The Poem*
+
+

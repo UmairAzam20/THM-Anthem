@@ -70,7 +70,7 @@ Then use curl enumration:
 Command: 
 
 ```bash
-curl http://10.48.128.146/robots.txt
+curl http://10.49.160.141/robots.txt
 ```
 
 Output:
@@ -88,7 +88,7 @@ Contains *UmbracoIsTheBest!* which appears to be a password.
 
 **Step 3: Web Enumeration – Page Source Analysis**
 
-Visited: `http://10.48.128.146`
+Visited: `http://10.49.160.141`
 
 Findings from source code (Ctrl+U):
 
@@ -184,7 +184,7 @@ THM{L0L_WH0_D15}
 **Command to test web login:**
 
 ```bash
-# Manual browser test at http://10.48.128.146/umbraco
+# Manual browser test at http://10.49.160.141/umbraco
 # Credentials: sg@anthem.com : UmbracoIsTheBest!
 ```
 * Successfull Login
@@ -211,7 +211,7 @@ THM{L0L_WH0_D15}
 Using xfreerdp3
 
 ```bash
-xfreerdp3 /v:10.48.128.146 /u:sg /p:'UmbracoIsTheBest!'
+xfreerdp3 /v:10.49.160.141 /u:sg /p:'UmbracoIsTheBest!'
 ```
 
 ![Nmap Scan Results](screenshots/findsecondanswertoo.png)

@@ -94,23 +94,41 @@ Author email pattern: JD@anthem.com (from "We Are Hiring" post)
 ![Nmap Scan Results](screenshots/wethought.png)
 
 * Flag in View Page Source
-  
+
   *Flag 1*
-  
+
+```bash 
+THM{L0L_WH0_US3S_M3T4}
+ ```
+ 
 ![Nmap Scan Results](screenshots/anotherone.png)
 
+
   *Flag 2*
+
+```bash 
+THM{G!T_G00D}
+ ```
   
 ![Nmap Scan Results](screenshots/ANOTHERFLAG.png)
 
+
   *Flag 4*
+
+```bash 
+THM{AN0TH3R_M3TA}
+ ```  
   
 ![Nmap Scan Results](screenshots/MOREFLAG.png)
 
 For Flag 3 we found it in the web page displaying in pages Authors/Jane Doe
 
   *Flag 3*
-  
+
+```bash 
+THM{L0L_WH0_D15}
+ ```  
+
 ![Nmap Scan Results](screenshots/flagnumberdonow.png)
 
 
@@ -202,6 +220,12 @@ Or Using remmina
 
 ![Nmap Scan Results](screenshots/rdpuser.txt.png)
 
+Find `user.txt` Flag:
+
+```bash
+THM{N00T_NO0T}
+```
+
 
 **Step 3 – Privilege Escalation – Hidden File:**
 
@@ -250,7 +274,7 @@ Add `sg` user with read permission
 
 * Open File Again and Successfull
   
-![Nmap Scan Results](screenshots/rdpaccssfullpermission.png)
+![Nmap Scan Results](screenshots/rdprestore.txtfinal.png)
 
 Password found: `ChangeMeBaby1MoreTime`
 
@@ -275,6 +299,10 @@ Password found: `ChangeMeBaby1MoreTime`
 ![Nmap Scan Results](screenshots/logintoadministrtorsteplast.png)
 
 Capture Admin Flag:
+
+```bash
+THM{Y0U_4R3_1337}
+```
 
 Location: Administrator desktop
 

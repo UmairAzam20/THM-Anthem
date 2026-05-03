@@ -60,6 +60,13 @@ nmap -sC -sV -Pn 10.49.160.141
 
 **Step 2: Web Enumeration – robots.txt**
 
+Using nikto to find if theres robots.txt:
+
+![Nmap Scan Results](screenshots/nikto.png)
+
+
+Then use curl enumration:
+
 Command: 
 
 ```bash
@@ -307,3 +314,15 @@ THM{Y0U_4R3_1337}
 Location: Administrator desktop
 
 File: `root.txt` 
+
+## Tools
+## Tools Used
+
+| Tool | Purpose |
+|------|---------|
+| `nmap -sC -sV -Pn` | Port scanning and service version detection |
+| `curl \| grep -i` | HTTP request inspection with case-insensitive filtering |
+| View Page Source (Ctrl+U) | Hidden flag discovery in HTML comments |
+| xfreerdp3 | CLI RDP client for Windows remote access |
+| Remmina | GUI RDP client for visual enumeration |
+| Windows File Explorer (Properties) | Permission modification for privilege escalation |

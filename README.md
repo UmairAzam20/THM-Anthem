@@ -79,4 +79,15 @@ Contains *UmbracoIsTheBest!* which appears to be a password.
 
 ![Nmap Scan Results](screenshots/robots.txt1.png)
 
+**Step 3: Web Enumeration – Page Source Analysis**
+
+Visited: `http://10.48.128.146`
+
+Findings from source code (Ctrl+U):
+
+Flag found in source: `THM{...}` 
+
+Author email pattern: JD@anthem.com (from "We Are Hiring" post)
+
+![Nmap Scan Results](screenshots/robots.txt1.png)
 

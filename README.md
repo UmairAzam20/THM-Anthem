@@ -38,15 +38,13 @@ Windows target with realistic CMS (Umbraco) and RDP misconfigurations – common
 
 ```
 
-**Tools Selection**
+## Methodology & Tool Mapping
 
-### Tools Used & Justification
-
-| Phase | Tool | Justification |
-|-------|------|----------------|
-| **Reconnaissance** | Nmap | Initial port scan to identify attack surface |
-| **Web Enumeration** | Nikto, Curl, Browser | Automated + manual web inspection to uncover `/robots.txt` and hidden credentials |
-| **Flag Discovery** | View Page Source (Ctrl+U) | Found flags directly in HTML comments during manual review |
-| **Exploitation** | xfreerdp3, Remmina | RDP clients used to connect to Windows target after credential discovery (`sg:UmbracoIsTheBest!`) |
-
-
+| Phase | Tools Used | Key Findings |
+|-------|-----------|--------------|
+| **1. Port Scanning** | Nmap | Ports 80 (HTTP), 3389 (RDP) |
+| **2. Directory Brute-force** | Gobuster | `/archive`, `/authors`, `/umbraco`, `/install` |
+| **3. Web Vuln Scanning** | Nikto, Curl | `/robots.txt` with password |
+| **4. Source Code Review** | Browser (Ctrl+U) | Flags 1-4, email pattern JD@anthem.com |
+| **5. RDP Exploitation** | xfreerdp3, Remmina | User flag as `SG` |
+| **6. Privilege Escalation** | Windows Explorer (hidden files) | Admin password in `C:\backup\restore.txt` |

@@ -177,3 +177,22 @@ For Flag 3 we found it in the web page displaying in pages Authors/Jane Doe
 | robots.txt exposes /umbraco + password      | Information disclosure leading to credential reuse                    | Medium (5.3)     |
 | RDP port 3389 open with discovered password | Weak RDP credentials (sg user) – lateral movement risk                | High (7.5)       |
 | Umbraco CMS exposed                         | Potential outdated CMS with known RCE (if public-facing)              | Critical (9.0)   |
+
+
+## 3. EXPLOITATION & FLAG ACQUISITION
+
+**Step 1 – RDP Login with Discovered Credentials:**
+
+Using xfreerdp3
+
+```bash
+xfreerdp3 /v:10.48.128.146 /u:sg /p:'UmbracoIsTheBest!'
+```
+
+![Nmap Scan Results](screenshots/findsecondanswertoo.png)
+
+Or Using remmina 
+
+![Nmap Scan Results](screenshots/rdpstep2.png)
+
+

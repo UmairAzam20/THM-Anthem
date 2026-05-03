@@ -195,4 +195,37 @@ Or Using remmina
 
 ![Nmap Scan Results](screenshots/rdpstep2.png)
 
+**Step 2 – Capture User Flag:**
+
+* Navigate to desktop of user sg
+* File: `user.txt` or similar
+
+![Nmap Scan Results](screenshots/rdpuser.txt.png)
+
+
+**Step 3 – Privilege Escalation – Hidden File:**
+
+* We get Hint that the admin password is Hidden.
+
+```bash
+# In Windows RDP session
+# Enable "Show hidden files" in File Explorer
+# Navigate to C:\backup\
+# File: restore.txt
+```
+
+*Step 1*
+
+![Nmap Scan Results](screenshots/rdphiddenfiles.png)
+
+
+*Step 2*
+
+![Nmap Scan Results](screenshots/rdprestore.txt.png)
+
+
+*Step 3*
+
+![Nmap Scan Results](screenshots/rdpbackupfiles.png)
+
 

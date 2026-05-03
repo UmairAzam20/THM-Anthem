@@ -139,3 +139,24 @@ For Flag 3 we found it in the web page displaying in pages Authors/Jane Doe
 *Searching from Google About The Poem*
 
 ![Nmap Scan Results](screenshots/solomon.png)
+
+
+**Step 4: Credential Discovery & Validation**
+
+| Username / Email              | Password Found        | Working? |
+|------------------------------|----------------------|----------|
+| JD@anthem.com                | (none yet)           | ❌ No     |
+| sg@anthem.com (Solomon Grundy) | UmbracoIsTheBest!   | ✅ Yes    |
+
+**Command to test web login:**
+
+```bash
+# Manual browser test at http://10.48.128.146/umbraco
+# Credentials: sg@anthem.com : UmbracoIsTheBest!
+```
+* Successfull Login
+  
+![Nmap Scan Results](screenshots/cmsadminpanelnothing.png)
+
+
+

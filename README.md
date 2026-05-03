@@ -285,7 +285,7 @@ Add `sg` user with read permission
 
 Password found: `ChangeMeBaby1MoreTime`
 
-**Step 5 – Admin RDP Login:**
+**Step 5 – Root RDP Login:**
 
 ```bash
 # Go to This Pc Navigate to C:\Users\Administrator
@@ -305,7 +305,7 @@ Password found: `ChangeMeBaby1MoreTime`
 
 ![Nmap Scan Results](screenshots/logintoadministrtorsteplast.png)
 
-Capture Admin Flag:
+Capture Root Flag:
 
 ```bash
 THM{Y0U_4R3_1337}
@@ -315,13 +315,30 @@ Location: Administrator desktop
 
 File: `root.txt` 
 
-## Tools
+## Flags Obtained
+
+| Flag Type | Value | Discovery Method |
+|-----------|-------|------------------|
+| Flag 1 (Source code) | `THM{L0L_WH0_US3S_M3T4}` | View page source on homepage/ `curl grep -i` |
+| Flag 2 (Source code) | `THM{G!T_G00D}` | View page source on blog post/ `curl grep -i` |
+| Flag 3 (Source code) | `THM{L0L_WH0_D15}` | View page source in author link |
+| Flag 4 (Source code) | `THM{AN0TH3R_M3TA}` | View page source on second blog post/ `curl grep -i` |
+| User Flag | `THM{N00T_NO0T}` | RDP desktop as `sg` user |
+| Admin Flag (Root) | `THM{Y0U_4R3_1337}` | RDP desktop as `administrator` after privilege escalation |
+
+
+## Summary
+
+A vulnerability assessment was performed on the TryHackMe target "Anthem" (Windows-based, IP: 10.48.128.146). Scanning revealed open ports 80 (HTTP) and 3389 (RDP). Nikto discovered `/robots.txt` containing the password `UmbracoIsTheBest!`, while manual page source review revealed email patterns and flags. Using the discovered credentials, RDP access was gained as user `sg` to capture the user flag. Further enumeration found a hidden file `C:\backup\restore.txt`; modifying its permissions allowed reading the administrator password `ChangeMeBaby1MoreTime`. RDP access as `administrator` led to the admin flag, achieving full system compromise.
+
+
 ## Tools Used
 
 | Tool | Purpose |
 |------|---------|
 | `nmap -sC -sV -Pn` | Port scanning and service version detection |
-| `curl \| grep -i` | HTTP request inspection with case-insensitive filtering |
+| Nikto | Automated web scan to discover `/robots.txt` |
+| `curl \| grep -i` | Retrieve and search `/robots.txt` for credentials |
 | View Page Source (Ctrl+U) | Hidden flag discovery in HTML comments |
 | xfreerdp3 | CLI RDP client for Windows remote access |
 | Remmina | GUI RDP client for visual enumeration |

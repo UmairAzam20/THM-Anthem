@@ -141,6 +141,14 @@ For Flag 3 we found it in the web page displaying in pages Authors/Jane Doe
 ![Nmap Scan Results](screenshots/solomon.png)
 
 
+**Another Methods**
+
+* We can also find the flag using `curl -s http://10.49.160.141/robots.txt | grep i- "THM"`
+* Manage to find 3 Flags
+
+![Nmap Scan Results](screenshots/FindFlagbuusingterminal.png)
+
+
 **Step 4: Credential Discovery & Validation**
 
 | Username / Email              | Password Found        | Working? |
@@ -158,5 +166,14 @@ For Flag 3 we found it in the web page displaying in pages Authors/Jane Doe
   
 ![Nmap Scan Results](screenshots/cmsadminpanelnothing.png)
 
+* Unfortunately theres nothing we can find in the CMS Admin Panel but we already know the Username and Password to Perform Next Step.
 
 
+**Step 5: Initial Vulnerability Hypotheses**
+
+
+| Finding                                      | Vulnerability Hypothesis                                              | CVSS Estimate     |
+|---------------------------------------------|-----------------------------------------------------------------------|------------------|
+| robots.txt exposes /umbraco + password      | Information disclosure leading to credential reuse                    | Medium (5.3)     |
+| RDP port 3389 open with discovered password | Weak RDP credentials (sg user) – lateral movement risk                | High (7.5)       |
+| Umbraco CMS exposed                         | Potential outdated CMS with known RCE (if public-facing)              | Critical (9.0)   |

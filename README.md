@@ -38,13 +38,21 @@ Windows target with realistic CMS (Umbraco) and RDP misconfigurations – common
 
 ```
 
-## Methodology & Tool Mapping
+## 2. METHODOLOGY, SCANNING & ANALYSIS 
 
-| Phase | Tools Used | Key Findings |
-|-------|-----------|--------------|
-| **1. Port Scanning** | Nmap | Ports 80 (HTTP), 3389 (RDP) |
-| **2. Directory Brute-force** | Gobuster | `/archive`, `/authors`, `/umbraco`, `/install` |
-| **3. Web Vuln Scanning** | Nikto, Curl | `/robots.txt` with password |
-| **4. Source Code Review** | Browser (Ctrl+U) | Flags 1-4, email pattern JD@anthem.com |
-| **5. RDP Exploitation** | xfreerdp3, Remmina | User flag as `SG` |
-| **6. Privilege Escalation** | Windows Explorer (hidden files) | Admin password in `C:\backup\restore.txt` |
+**Step 1: Initial Port Scanning (Nmap)**
+
+```bash
+
+nmap -sC -sV -Pn 10.49.160.141
+```
+
+* Result scanning
+
+![Nmap Scan Results](screenshots/nmapscancrop.png)
+
+
+| Port | State | Service | Version | Potential Risk | Severity |
+|:----:|:-----:|---------|---------|----------------|:--------:|
+| 80 | Open | HTTP | IIS / Umbraco CMS | Web attack surface; admin panel exposure; potential RCE | High |
+| 3389 | Open | RDP | Microsoft Terminal Services | Brute-force attacks; credential reuse; BlueKeep (CVE-2019-0708) | Critical |

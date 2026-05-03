@@ -56,3 +56,27 @@ nmap -sC -sV -Pn 10.49.160.141
 |:----:|:-----:|---------|---------|----------------|:--------:|
 | 80 | Open | HTTP | IIS / Umbraco CMS | Web attack surface; admin panel exposure; potential RCE | High |
 | 3389 | Open | RDP | Microsoft Terminal Services | Brute-force attacks; credential reuse; BlueKeep (CVE-2019-0708) | Critical |
+
+
+**Step 2: Web Enumeration – robots.txt**
+
+Command: 
+
+```bash
+curl http://10.48.128.146/robots.txt
+```
+
+Output:
+
+```bash
+User-agent: *
+Disallow: /umbraco
+Disallow: /content
+... (4 entries total)
+```
+Finding: 
+Contains *UmbracoIsTheBest!* which appears to be a password.
+
+![Nmap Scan Results](screenshots/nmapscancrop.png)
+
+

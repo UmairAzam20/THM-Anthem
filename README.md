@@ -77,6 +77,6 @@ Disallow: /content
 Finding: 
 Contains *UmbracoIsTheBest!* which appears to be a password.
 
-![Nmap Scan Results](screenshots/nmapscancrop.png)
+![Nmap Scan Results](screenshots/robots.txt1.png)
 
 

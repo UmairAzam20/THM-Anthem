@@ -336,19 +336,28 @@ A vulnerability assessment was performed on the TryHackMe target "Anthem" (Windo
 Throughout this writeup, I encountered several technical challenges that affected my workflow.
 
 
-1. Time Limitation & Bug on TryHackMe Attack Box
+**1. Time Limitation & Bug on TryHackMe Attack Box**
+
 Initially, I used the TryHackMe Attack Box. However, the free tier has a limitation of only 1 hour per day. To extend the session, there is supposed to be an "Add 1 Hour" button that can be clicked when the time is about to run out.
 
 
 **The problem:**
-Even after clicking the "Add 1 Hour" button, the system seemed to have a bug — the remaining time did not update. As a result, the Attack Box still expired, and I was forced to restart the Attack Machine from scratch.
+
+Even after clicking the "Add 1 Hour" button, the system seemed to have a bug — 
+
+the remaining time did not update. As a result, the Attack Box still expired, and I was forced to restart the Attack Machine from scratch.
 
 
-2. Impact of the Issue
-Multiple IP Addresses – Due to several restarts, this writeup contains different IP addresses for the same attack sequence.
+**2. Impact of the Issue**
+
+**Multiple IP Addresses – **
+
+Due to several restarts, this writeup contains different IP addresses for the same attack sequence.
 
 
-Disrupted Workflow – The process of writing the writeup became non-linear, as I had to wait for the machine to become ready again.
+**Disrupted Workflow – **
+
+The process of writing the writeup became non-linear, as I had to wait for the machine to become ready again.
 
 
 ## Tools Used

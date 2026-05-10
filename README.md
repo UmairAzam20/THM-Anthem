@@ -331,6 +331,25 @@ File: `root.txt`
 
 A vulnerability assessment was performed on the TryHackMe target "Anthem" (Windows-based, IP: 10.48.128.146). Scanning revealed open ports 80 (HTTP) and 3389 (RDP). Nikto discovered `/robots.txt` containing the password `UmbracoIsTheBest!`, while manual page source review revealed email patterns and flags. Using the discovered credentials, RDP access was gained as user `sg` to capture the user flag. Further enumeration found a hidden file `C:\backup\restore.txt`; modifying its permissions allowed reading the administrator password `ChangeMeBaby1MoreTime`. RDP access as `administrator` led to the admin flag, achieving full system compromise.
 
+## Problem Facing
+
+Throughout this writeup, I encountered several technical challenges that affected my workflow.
+
+
+1. Time Limitation & Bug on TryHackMe Attack Box
+Initially, I used the TryHackMe Attack Box. However, the free tier has a limitation of only 1 hour per day. To extend the session, there is supposed to be an "Add 1 Hour" button that can be clicked when the time is about to run out.
+
+
+**The problem:**
+Even after clicking the "Add 1 Hour" button, the system seemed to have a bug — the remaining time did not update. As a result, the Attack Box still expired, and I was forced to restart the Attack Machine from scratch.
+
+
+2. Impact of the Issue
+Multiple IP Addresses – Due to several restarts, this writeup contains different IP addresses for the same attack sequence.
+
+
+Disrupted Workflow – The process of writing the writeup became non-linear, as I had to wait for the machine to become ready again.
+
 
 ## Tools Used
 

@@ -350,12 +350,12 @@ the remaining time did not update. As a result, the Attack Box still expired, an
 
 **2. Impact of the Issue**
 
-**Multiple IP Addresses – **
+**Multiple IP Addresses –**
 
 Due to several restarts, this writeup contains different IP addresses for the same attack sequence.
 
 
-**Disrupted Workflow – **
+**Disrupted Workflow –**
 
 The process of writing the writeup became non-linear, as I had to wait for the machine to become ready again.
 
